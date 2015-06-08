@@ -6,6 +6,11 @@
 - Combine changes from one branch with another using `git rebase`.
 
 ## Prerequisites
+- Basic Git workflow
+- Pre-reading:
+  1. https://www.atlassian.com/git/tutorials/using-branches
+  2. https://www.atlassian.com/git/tutorials/comparing-workflows
+  3. https://www.atlassian.com/git/tutorials/merging-vs-rebasing ('Conceptual Overiew' section)
 
 ## Section 1
 
