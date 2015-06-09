@@ -37,12 +37,9 @@ A Git repository can be imagined as a tree of interconnected nodes, each represe
 
 ![Git Repo with Two Commits](images/structure_01.png)
 
-Each commit also has a unique name (which allows us to identify it) and a commit message (which tells us what changes the commit makes). `master`, above, is a __branch__ : a reference pointing to some commit in the 'tree' of our repository. Above `master` in this diagram is another reference called `HEAD`. `HEAD` indicates the point on the repository that we're reading from, and where a branch will be placed if we run `git branch`.
+Each commit also has a unique name (which allows us to identify it) and a commit message (which tells us what changes the commit makes). `master`, above, is a __branch__ : a reference pointing to some commit in the 'tree' of our repository. New commits can only be made at the end of a branch.
 
 ![Git Repo with Three Commits](images/structure_02.png)
-
- When `HEAD` is pointing at a branch it also indicates where our next commit will br placed. **Commits can only be made at the ends of branches.** We can use the command `git checkout` to change what `HEAD` points to, and thus, to what branch our next commit will be added.
-
 
 ## Section 2
 
