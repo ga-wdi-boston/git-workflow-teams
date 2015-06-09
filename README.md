@@ -170,6 +170,52 @@ Go back to your project and check out the master branch. After implementing each
 - Change the color scheme of your page in your CSS.
 - Change the `<ul>` in your HTML to an `<ol>` (ordered list) and update your JavaScript accordingly.
 
+## Team Workflows
+
+So far, we've only talked about Merge and Rebase in the context of working alone. Here are a few examples of workflows that might get used in the field.
+
+### Single-Remote Workflows
+One thing all of these approaches have in common is the necessity of staying on top of changes to a single shared repository. This is usually accomplished by running `git fetch`, which pulls updates from origin, and merging those updates; alternatively, you could use `git pull` to do both at once.
+
+#### Centralized Workflow
+**How It Works**: The remote repo has one single branch on it, `master`. All collaborators have separate clones of this repo. They can each work independently on separate things. However, before they push, they need to run `git fetch`/`git pull` (with the `--rebase` flag) to make sure that their master branch isn't out of date.
+
+  (+) Very simple
+
+  (-) Collaboration is kind of clunky.
+
+#### Feature Branch Workflow
+**How It Works**: This workflow is very similar to the 'Centralized' workflow. The biggest difference is that there are branches (which helps to keep feature-related commits isolated), and that instead of pushing changes up directly, collaborators (a) push up changes to a new remote branch rather than master, and (b) submit a pull request to ask for them to be added to the remote repo's `master` branch.
+
+  (+) Better isolation than Centralized model, but sharing is still easy. Very flexible.
+
+  (-) Sometimes it's too flexible - it doesn't distinguish in any meaningful way between different branches, and that lack of structure can be problematic for larger projects.
+
+#### 'Gitflow' Workflow
+**How It Works**: Similar to the Feature Branch workflows, but with more rigidly-defined branches. For example:
+- Historical Branches : `master` stores official releases, while `develop` serves as a living 'integration branch' that ties togther all the standalone features.
+- Release Branches : 'release' branches might exist for any given release, to keep all of those materials together.
+- Feature Branches : pretty much the same as in the prior model.
+- Maintenance/'Hotfix' Branches : branches used to quickly patch issues with production code.
+
+  (+) Highly structured - works well for large projects.
+
+  (-) Sometimes overkill for something small.
+
+### Distributes Workflows
+These approaches all use multiple remote repos; typically, everyone has their own fork of the 'original' project (the version of the repo that's publicly visible and is managed by the project maintainer), and changes are submitted via pull request.
+
+#### Integration Manager Workflow
+**How It Works**: One collaborator plays the role of 'Integration Manager'. This means that they are responsible for managing the official repository and either accepting or rejecting pull requests as they come in.
+
+   (+) One person integrates all changes, so there's consistency.
+
+   (-) Could get overwhelming for large projects.
+
+#### Director/Lieutenants Workflow
+**How It Works**: This workflow is very similar to the Integration Manager Workflow. The biggest difference is that rather than submitting all pull requests to a single integration manager, PRs are funneled through `Lieutentants`, who all report to the 'Dictator'. Only the Dictator has write access to the official repo.
+
+   (This workflow basically has the opposite tradeoff of the previous one).
 
 ## Further Reading
 
