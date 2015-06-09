@@ -100,17 +100,17 @@ When your group is finished, tip your laptop screens down.
 
 Once you've created all your different branches, you need a way to bring them all back together again. One way that Git allows us to do this is by __merging__ branches.
 
-![Merging - Separate Branches]()
+![Merging - Separate Branches](images/merge_01.png)
 
 Merging creates a **new commit on your current branch** (on top of existing commits) that includes all of the changes made by another branch. The syntax for doing this is `git merge some_branch`, where `some_branch` is the branch that you're pulling into your current branch.
 
-![Merging - Merged]()
+![Merging - Merged](images/merge_02.png)
 
 This doesn't destroy your original branch; all those commits are still there. However, they're not carried over to the current branch, only their data is.
 
 What if someone got overzealous and made a change to `master` before we merged in `structure`? Well, if the change doesn't conflict with anything in `structure`, probably nothing! Git tries very hard to merge automatically. However, sometimes there are conflicts that Git can't resolve on its own.
 
-![Merging - Conflict]()
+![Merging - Conflict](images/merge_03.png)
 
 In those cases - instead of directly merging, it asks the user to manually resolve the conflicts. That usually looks something like this:
 
@@ -148,15 +148,15 @@ While merging represents one path for combining different branches, there is ano
 
 Here's what a rebase looks like. Suppose we have two branches, like this.
 
-![Rebasing - Separate Branches]()
+![Rebasing - Separate Branches](images/rebase_01.png)
 
 One day, someone makes a commit onto the `master` branch. We want to include those changes into our feature branch, so that our code doesn't conflict with theirs.
 
-![Rebasing - Master is Ahead]()
+![Rebasing - Master is Ahead](images/rebase_02.png)
 
 From our feature branch, if we run the command `git rebase master`, we can tell git to rewrite the history of our feature branch as if the new commit on `master` had __always been there__.
 
-![Rebasing - In Action]()
+![Rebasing - In Action](images/rebase_03.png)
 
 Rebase is extremely useful for cleaning up your commit history, but it also carries risk; when you rebase, you are in fact discarding your old commits and replacing them with new (though admittedly, similar) commits, and this can seriously screw up a collaborator if you're working in a shared repo.The golden rule for `git rebase` is "Only rebase **before** sharing your code, **never** after."
 
