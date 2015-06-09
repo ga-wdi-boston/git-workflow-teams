@@ -57,7 +57,7 @@ New commits would then be placed onto the `structure` branch.
 
 ![Branching, Part 4](images/branching_04.png)
 
-### Try It Out
+### Lab : Part 1
 
 Over the course of the day, we're going to work on a project together - building a simple web page. Pick one person in your group to make a new repo.
 
@@ -65,6 +65,8 @@ In the master branch of your repo, you should start out by
   - Creating a template HTML file (index.html), a blank CSS file (styles/main.css), and a blank JS file (app.js)
   - Making a blank README.md file.
   - Running `npm init`, `npm install bower`, and `bower init` to download and set up NPM and Bower for your project.
+
+Make commits as appropriate.
 
 Once that's done, make two new branches - one called `ui` and one called `ajax`. When your group is finished with this, tip your laptop screens down.
 
