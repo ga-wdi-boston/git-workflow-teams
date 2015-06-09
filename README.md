@@ -217,5 +217,11 @@ These approaches all use multiple remote repos; typically, everyone has their ow
 
 (This workflow basically has the opposite tradeoff of the previous one).
 
+### Lab : Part 4
+
+Now that you've practiced doing branching, merging and rebasing on a single machine, your next challenge will be to use these tools in the context of a larger Git workflow, spanning your entire team.
+
+As a team of four, create a simple front-end app of your own choosing by following one of the Git workflow patterns described above. Make commits regularly, in case you need to undo a mistake. If you finish, and there's still time, try putting together a back-end for your front-end.
+
 ## Further Reading
 
