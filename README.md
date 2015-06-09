@@ -215,7 +215,7 @@ These approaches all use multiple remote repos; typically, everyone has their ow
 
 (-) Could get overwhelming for large projects.
 
-#### Director/Lieutenants Workflow
+#### Dictator/Lieutenants Workflow
 **How It Works**: This workflow is very similar to the Integration Manager Workflow. The biggest difference is that rather than submitting all pull requests to a single integration manager, PRs are funneled through `Lieutentants`, who all report to the 'Dictator'. Only the Dictator has write access to the official repo.
 
 (This workflow basically has the opposite tradeoff of the previous one).
