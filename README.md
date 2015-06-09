@@ -33,7 +33,7 @@ As a rule of thumb, when working full-time on a project you should make at least
 
 ## Structure of a Git Repo
 
-A Git repository can be imagined as a tree of interconnected nodes, each representing a commit/snapshot. Each of these nodes refers back to one (and only one) previous node, which represents the state of the repository before that commit was made.
+A Git repository can be imagined as a tree of interconnected nodes, each representing a commit/snapshot. Each of these nodes refers back to one (usually) previous node, which represents the state of the repository before that commit was made.
 
 ![Git Repo with Two Commits](images/structure_01.png)
 
