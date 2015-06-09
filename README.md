@@ -224,4 +224,5 @@ Now that you've practiced doing branching, merging and rebasing on a single mach
 As a team of four, create a simple front-end app of your own choosing by following one of the Git workflow patterns described above. Make commits regularly, in case you need to undo a mistake. If you finish, and there's still time, try putting together a back-end for your front-end.
 
 ## Further Reading
-
+- http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+- http://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows
