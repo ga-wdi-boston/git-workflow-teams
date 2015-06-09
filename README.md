@@ -162,5 +162,14 @@ Rebase is extremely useful for cleaning up your commit history, but it also carr
 
 Like `git merge`, `git rebase` also sometimes runs into merge conflicts that need to be resolved. The procedure for doing this is almost the same; once you fix the conflicts, run `git rebase --continue` to complete the rebase.
 
+### Lab : Part 3
+
+Go back to your project and check out the master branch. After implementing each of the following changes, check out your `ui` branch and try to rebase. If and when you run into conflicts, do your best to resolve them.
+
+- Use Bower to install Handlebars, and add a link to it from your HTML file.
+- Change the color scheme of your page in your CSS.
+- Change the `<ul>` in your HTML to an `<ol>` (ordered list) and update your JavaScript accordingly.
+
+
 ## Further Reading
 
