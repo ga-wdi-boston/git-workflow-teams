@@ -41,7 +41,7 @@ Each commit also has a unique name (which allows us to identify it) and a commit
 
 ![Git Repo with Three Commits](images/structure_02.png)
 
-## Branching and Merging
+## Branching
 
 ![Branching, Part 1](images/branching_01.png)
 
