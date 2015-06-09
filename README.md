@@ -142,5 +142,25 @@ Now that you've created some branches in your team's project, you're going to tr
 
 When your group is finished, tip your laptop screens down.
 
+## Rebasing
+
+While merging represents one path for combining different branches, there is another common path called `rebase`. Rebasing works differently than merging. Rather than combining the finished data from two different branches via a single commit, it combines the two branches _themselves_, rearranging them and, effectively, re-writing history.
+
+Here's what a rebase looks like. Suppose we have two branches, like this.
+
+![Rebasing - Separate Branches]()
+
+One day, someone makes a commit onto the `master` branch. We want to include those changes into our feature branch, so that our code doesn't conflict with theirs.
+
+![Rebasing - Master is Ahead]()
+
+From our feature branch, if we run the command `git rebase master`, we can tell git to rewrite the history of our feature branch as if the new commit on `master` had __always been there__.
+
+![Rebasing - In Action]()
+
+Rebase is extremely useful for cleaning up your commit history, but it also carries risk; when you rebase, you are in fact discarding your old commits and replacing them with new (though admittedly, similar) commits, and this can seriously screw up a collaborator if you're working in a shared repo.
+
+The golden rule for `git rebase` is "Only rebase **before** sharing your code, **never** after."
+
 ## Further Reading
 
