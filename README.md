@@ -86,7 +86,34 @@ Once that's done, make two new branches - one called `ui` and one called `ajax`.
 
 When your group is finished, tip your laptop screens down.
 
-## Section 3
+## Merging
+
+Once you've created all your different branches, you need a way to bring them all back together again. One way that Git allows us to do this is by __merging__ branches.
+
+![Merging - Separate Branches]()
+
+Merging creates a **new commit on your current branch** (on top of existing commits) that includes all of the changes made by another branch. The syntax for doing this is `git merge some_branch`, where `some_branch` is the branch that you're pulling into your current branch.
+
+![Merging - Merged]()
+
+This doesn't destroy your original branch; all those commits are still there. However, they're not carried over to the current branch, only their data is.
+
+What if someone got overzealous and made a change to `master` before we merged in `structure`? Well, if the change doesn't conflict with anything in `structure`, probably nothing! Git tries very hard to merge automatically. However, sometimes there are conflicts that Git can't resolve on its own.
+
+![Merging - Conflict]()
+
+In those cases - instead of directly merging, it asks the user to manually resolve the conflicts. That usually looks something like this:
+
+```javascript
+  <<<<<<< HEAD
+  var x = 1,
+      y = 2;
+  =======
+  var x;
+  >>>>>>> other_branch
+```
+
+The first section is the version that exists on the current branch; the second section is the version that exists on the branch you're trying to pull in. Figure out which one is right, delete all the extra stuff that Git adds (`<<<<<<<`, `=======`, etc.) and run `git commit` to finalize the merge.
 
 ### Section 3 Activity
 
