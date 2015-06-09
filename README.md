@@ -63,6 +63,16 @@ Over the course of the day, we're going to work on a project together - building
 
 In the master branch of your repo, you should start out by
   - Creating a template HTML file (`index.html`), a blank CSS file (`styles/main.css`), and a blank JS file (`js/main.js`), and link them all together.
+  - Creating a `.gitignore` file inside your repo with the following contents:
+
+    ```
+      .DS_Store
+      .tmp
+      node_modules/
+      npm-debug.log
+      bower_components/
+    ```
+
   - Making a blank README.md file.
   - Running `npm init`, `npm install bower`, and `bower init` to download and set up NPM and Bower for your project.
 
