@@ -115,7 +115,9 @@ In those cases - instead of directly merging, it asks the user to manually resol
 
 The first section is the version that exists on the current branch; the second section is the version that exists on the branch you're trying to pull in. Figure out which one is right, delete all the extra stuff that Git adds (`<<<<<<<`, `=======`, etc.) and run `git commit` to finalize the merge.
 
-### Section 3 Activity
+### Lab : Part 2
+
+Now that you've created some branches in your project, we're going to try merging them.
 
 ## Further Reading
 
