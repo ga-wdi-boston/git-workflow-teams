@@ -202,7 +202,7 @@ One thing all of these approaches have in common is the necessity of staying on 
 
 (-) Sometimes overkill for something small.
 
-### Distributes Workflows
+### Distributed Workflows
 These approaches all use multiple remote repos; typically, everyone has their own fork of the 'original' project (the version of the repo that's publicly visible and is managed by the project maintainer), and changes are submitted via pull request.
 
 #### Integration Manager Workflow
