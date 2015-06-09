@@ -117,7 +117,20 @@ The first section is the version that exists on the current branch; the second s
 
 ### Lab : Part 2
 
-Now that you've created some branches in your project, we're going to try merging them.
+Now that you've created some branches in your team's project, you're going to try merging them.
+
+1. Check out the `ui` branch.
+  - Add a button to your page with the id "magic-button".
+  - Make some further changes to the style - however you like.
+  - Merge the `ui` branch back into `master`.
+  - Delete the `ui` branch using the command `git branch -d ui`.
+2. Check out the `ajax` branch.
+  - Swap out the `console.log` code in the `done` handler for some code that will (a) clear out the contents of the `<ul>` on our page, and (b) for each object in the response, append a new `<li>` element that contains the object's title.
+  - Rename `main.js` to `app.js` using a special git command for renaming/moving files within a repo, and update the HTML file to match.
+  - Merge the `ajax` branch back into `master. Do you hit any merge conflicts? If so, resolve them and make a new commit to finalize the merge.
+  - Make a new `ui` branch from the current location. Then, go to app.js and put the AJAX GET request inside a click handler for the button.
+
+When your group is finished, tip your laptop screens down.
 
 ## Further Reading
 
