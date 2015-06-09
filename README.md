@@ -69,19 +69,19 @@ In the master branch of your repo, you should start out by
 Make commits as appropriate.
 
 Once that's done, make two new branches - one called `ui` and one called `ajax`.
-- Check out the `ui` branch, add a `<div>` element with a `<ul>` inside it to your HTML file, and give these elements some styling.
-- Check out the `ajax` branch, install jQuery using Bower, and link to it from your HTML page. Then, write the following AJAX request into your `main.js` file.
+1. Check out the `ui` branch. Add a `<div>` element with a `<ul>` inside it to your HTML file, and give these elements some styling.
+2. Check out the `ajax` branch, install jQuery using Bower, and link to it from your HTML page. Then, write the following AJAX request into your `main.js` file.
 
 ```javascript
-  $(document).ready(
+  $(document).ready(function(){
     var root = 'http://jsonplaceholder.typicode.com';
     $.ajax({
       url: root + '/posts',
       method: 'GET'
-    }).then(function(data) {
+    }).done(function(data) {
       console.log(data);
     });
-  );
+  });
 ```
 
 When your group is finished, tip your laptop screens down.
