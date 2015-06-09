@@ -41,7 +41,21 @@ Each commit also has a unique name (which allows us to identify it) and a commit
 
 ![Git Repo with Three Commits](images/structure_02.png)
 
-## Section 2
+## Branching and Merging
+
+![Branching, Part 1](images/branching_01.png)
+
+In the diagram above, alongside `master` there's another reference called `HEAD`. `HEAD` indicates the point on the repository that we're reading from. When we run `git branch`, new branches get added at wherever `HEAD` points. For instance, if we were to run `git branch structure` on the repo above, here's what would happen.
+
+![Branching, Part 2](images/branching_02.png)
+
+In addition to specifying where new branches go, if HEAD is pointing at the end of a branch, it also means that new commits will be added to that branch. If we want to start adding commits to our new `structure` branch instead of our `master` branch, we have to move `HEAD`; this is done using the command `git checkout`. In particular, we want to checkout the `structure` branch, so we would run `git checkout structure`.
+
+![Branching, Part 3](images/branching_03.png)
+
+New commits would then be placed onto the `structure` branch.
+
+![Branching, Part 4](images/branching_04.png)
 
 ### Section 2 Activity
 
