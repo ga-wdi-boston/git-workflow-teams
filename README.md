@@ -112,7 +112,7 @@ What if someone got overzealous and made a change to `master` before we merged i
 
 ![Merging - Conflict](images/merge_03.png)
 
-In those cases - instead of directly merging, it asks the user to manually resolve the conflicts. That usually looks something like this:
+In those cases, instead of directly merging, Git asks the user to manually resolve the conflicts. That usually looks something like this:
 
 ```javascript
   <<<<<<< HEAD
