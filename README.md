@@ -79,6 +79,7 @@ In the master branch of your repo, you should start out by
 Make commits as appropriate.
 
 Once that's done, make two new branches - one called `ui` and one called `ajax`.
+
 1. Check out the `ui` branch. Add a `<div>` element with a `<ul>` inside it to your HTML file, and give these elements some styling.
 2. Check out the `ajax` branch, install jQuery using Bower, and link to it from your HTML page. Then, write the following AJAX request into your `main.js` file.
 
@@ -137,8 +138,8 @@ Now that you've created some branches in your team's project, you're going to tr
 2. Check out the `ajax` branch.
   - Swap out the `console.log` code in the `done` handler for some code that will (a) clear out the contents of the `<ul>` on our page, and (b) for each object in the response, append a new `<li>` element that contains the object's title.
   - Rename `main.js` to `app.js` using a special git command for renaming/moving files within a repo, and update the HTML file to match.
-  - Merge the `ajax` branch back into `master. Do you hit any merge conflicts? If so, resolve them and make a new commit to finalize the merge.
-  - Make a new `ui` branch from the current location. Then, go to app.js and put the AJAX GET request inside a click handler for the button.
+  - Merge the `ajax` branch back into `master`. Do you hit any merge conflicts? If so, resolve them and make a new commit to finalize the merge.
+  - Make a new `ui` branch from the current location and check it out. Then, go to app.js and put the AJAX GET request inside a click handler for the button.
 
 When your group is finished, tip your laptop screens down.
 
