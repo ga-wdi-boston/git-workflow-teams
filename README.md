@@ -170,6 +170,8 @@ Go back to your project and check out the master branch. After implementing each
 - Change the color scheme of your page in your CSS.
 - Change the `<ul>` in your HTML to an `<ol>` (ordered list) and update your JavaScript accordingly.
 
+When your group is finished, tip your laptop screens down.
+
 ## Team Workflows
 
 So far, we've only talked about Merge and Rebase in the context of working alone. Here are a few examples of workflows that might get used in the field.
