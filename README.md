@@ -180,16 +180,16 @@ One thing all of these approaches have in common is the necessity of staying on 
 #### Centralized Workflow
 **How It Works**: The remote repo has one single branch on it, `master`. All collaborators have separate clones of this repo. They can each work independently on separate things. However, before they push, they need to run `git fetch`/`git pull` (with the `--rebase` flag) to make sure that their master branch isn't out of date.
 
-  (+) Very simple
+(+) Very simple
 
-  (-) Collaboration is kind of clunky.
+(-) Collaboration is kind of clunky.
 
 #### Feature Branch Workflow
 **How It Works**: This workflow is very similar to the 'Centralized' workflow. The biggest difference is that there are branches (which helps to keep feature-related commits isolated), and that instead of pushing changes up directly, collaborators (a) push up changes to a new remote branch rather than master, and (b) submit a pull request to ask for them to be added to the remote repo's `master` branch.
 
-  (+) Better isolation than Centralized model, but sharing is still easy. Very flexible.
+(+) Better isolation than Centralized model, but sharing is still easy. Very flexible.
 
-  (-) Sometimes it's too flexible - it doesn't distinguish in any meaningful way between different branches, and that lack of structure can be problematic for larger projects.
+(-) Sometimes it's too flexible - it doesn't distinguish in any meaningful way between different branches, and that lack of structure can be problematic for larger projects.
 
 #### 'Gitflow' Workflow
 **How It Works**: Similar to the Feature Branch workflows, but with more rigidly-defined branches. For example:
@@ -198,9 +198,9 @@ One thing all of these approaches have in common is the necessity of staying on 
 - Feature Branches : pretty much the same as in the prior model.
 - Maintenance/'Hotfix' Branches : branches used to quickly patch issues with production code.
 
-  (+) Highly structured - works well for large projects.
+(+) Highly structured - works well for large projects.
 
-  (-) Sometimes overkill for something small.
+(-) Sometimes overkill for something small.
 
 ### Distributes Workflows
 These approaches all use multiple remote repos; typically, everyone has their own fork of the 'original' project (the version of the repo that's publicly visible and is managed by the project maintainer), and changes are submitted via pull request.
@@ -208,14 +208,14 @@ These approaches all use multiple remote repos; typically, everyone has their ow
 #### Integration Manager Workflow
 **How It Works**: One collaborator plays the role of 'Integration Manager'. This means that they are responsible for managing the official repository and either accepting or rejecting pull requests as they come in.
 
-   (+) One person integrates all changes, so there's consistency.
+(+) One person integrates all changes, so there's consistency.
 
-   (-) Could get overwhelming for large projects.
+(-) Could get overwhelming for large projects.
 
 #### Director/Lieutenants Workflow
 **How It Works**: This workflow is very similar to the Integration Manager Workflow. The biggest difference is that rather than submitting all pull requests to a single integration manager, PRs are funneled through `Lieutentants`, who all report to the 'Dictator'. Only the Dictator has write access to the official repo.
 
-   (This workflow basically has the opposite tradeoff of the previous one).
+(This workflow basically has the opposite tradeoff of the previous one).
 
 ## Further Reading
 
