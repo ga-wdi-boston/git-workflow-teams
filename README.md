@@ -59,16 +59,32 @@ New commits would then be placed onto the `structure` branch.
 
 ### Lab : Part 1
 
-Over the course of the day, we're going to work on a project together - building a simple web page. Pick one person in your group to make a new repo.
+Over the course of the day, we're going to work on a project together - building a simple front-end app. Pick one person in your group to make a new repo.
 
 In the master branch of your repo, you should start out by
-  - Creating a template HTML file (index.html), a blank CSS file (styles/main.css), and a blank JS file (app.js)
+  - Creating a template HTML file (`index.html`), a blank CSS file (`styles/main.css`), and a blank JS file (`js/main.js`), and link them all together.
   - Making a blank README.md file.
   - Running `npm init`, `npm install bower`, and `bower init` to download and set up NPM and Bower for your project.
 
 Make commits as appropriate.
 
-Once that's done, make two new branches - one called `ui` and one called `ajax`. When your group is finished with this, tip your laptop screens down.
+Once that's done, make two new branches - one called `ui` and one called `ajax`.
+- Check out the `ui` branch, add a `<div>` element with a `<ul>` inside it to your HTML file, and give these elements some styling.
+- Check out the `ajax` branch, install jQuery using Bower, and link to it from your HTML page. Then, write the following AJAX request into your `main.js` file.
+
+```javascript
+  $(document).ready(
+    var root = 'http://jsonplaceholder.typicode.com';
+    $.ajax({
+      url: root + '/posts',
+      method: 'GET'
+    }).then(function(data) {
+      console.log(data);
+    });
+  );
+```
+
+When your group is finished, tip your laptop screens down.
 
 ## Section 3
 
