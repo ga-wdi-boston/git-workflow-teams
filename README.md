@@ -55,49 +55,50 @@ There are three core mechanics within Git that a feature branching strategy
 Two of them, branching and merging, you've already seen.
 Today, we'll introduce a third: _rebasing_.
 
-#### Centralized Workflow
+### Git Rebase, in Pictures
 
-The remote repo has one single branch on it, `master`.
-All collaborators have separate clones of this repo.
-They can each work independently on separate things.
-However, before they push,
- they need to run `git fetch`/`git pull` (with the `--rebase` flag)
- to make sure that their master branch isn't out of date.
+Suppose that you have two branches in your project, `master` and `feature`,
+  and that the `feature` branch is currently checked out.
 
-##### Advantages of Centralized Workflow
+![Rebase](images/rebase_01.png)
 
-Very simple - easy to remember how it works.
+If you were to check out the master branch and make a new commit,
+ the `feature` branch would no longer point to the end of the `master` branch.
 
-##### Disadvantages of Centralized Workflow
+![Rebase](images/rebase_02.png)
 
-A high amount of trust is required - if someone forgets to pull,
- they can cause a merge conflict when they push, or worse:
- push code that isn't conflicting but causes other peoples' code to break.
-Additionally, because commits may be pushed in any order,
- commits relating to different features may be interleaved.
+How could we update our `feature` branch to incorporate the new change?
+One option might be to check out the `feature` branch and merge in `master`.
+However, this is a little weird - we're essentially creating a duplicate commit.
+What's more, the commit on `master` might not be related to `feature`,
+ so it may not make sense for it to be on the `feature` branch.
 
-#### Feature Branch Workflow
+![Rebase](images/rebase_03.png)
 
-This workflow is very similar to the 'Centralized' workflow.
-The biggest difference is that there are branches
- (which helps to keep commits related to a new feature isolated),
- and that instead of pushing changes up directly, collaborators
- (a) push up changes to a new remote branch rather than master, and
- (b) submit a pull request to ask for them to be added to
- the remote repo's `master` branch.
+Rebase essentially allows us to pluck off an entire branch and move it so that
+ it points to a different commit.
+All we need to do is check out the `feature` branch (`git checkout feature`)
+ and run the command `git rebase master`; now, the root of the `feature` branch
+ points to the new end of the `master` branch
 
-##### Advantages of Feature Branch Workflow
+![Rebase](images/rebase_04.png)
+![Rebase](images/rebase_05.png)
 
-Better isolation than Centralized model, but sharing is still easy.
-Very flexible.
+Now, to be honest, that's not quite what happens - in making the move,
+Git actually destroys the old commits and replaces them with new commits
+ (with new and different SHAs).
 
-##### Disadvantages of Feature Branch Workflow
+ ![Rebase](images/rebase_06.png)
 
-Sometimes it's too flexible --
- it doesn't distinguish in any meaningful way between different branches,
- and that lack of structure can be problematic for larger projects.
+This is one of the things that can make `git rebase` dangerous.
+If you had other branches that pointed to the old commits on `feature`,
+ the rebasing process will completely mess those branches up.
+This is why, as a rule, you never rebase code that's already been shared -
+ you run the risk of breaking other peoples' code.
 
-#### 'Gitflow' Workflow
+However, as long as you're only rebasing your own code on top of things,
+ `git rebase` is perfectly safe, and if `master` happens to change a lot,
+ it's a great way of making sure that `feature` stays up to date.
 
 Similar to the Feature Branch workflows, but with more rigidly-defined branches.
 For example:
