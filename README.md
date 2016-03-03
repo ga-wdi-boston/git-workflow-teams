@@ -91,8 +91,8 @@ Git actually destroys the old commits and replaces them with new commits
  ![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502539/5b41ef8a-e139-11e5-8641-d488f3b88f0e.png)
 
 This is one of the things that can make `git rebase` dangerous.
-If you had other branches that pointed to the old commits on `feature`,
- the rebasing process will completely mess those branches up.
+If other members of your team are working off of a branch that you rebase and push up, 
+ you might screw up what they're working on.
 This is why, as a rule, you never rebase code that's already been shared -
  you run the risk of breaking other peoples' code.
 
