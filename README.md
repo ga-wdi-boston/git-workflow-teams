@@ -30,24 +30,30 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 3.  [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
       ('Conceptual Overiew' section only)
 
-## Working With Teams
+## Git, Together
 
-So far, we've only talked about workflow in the context of working alone.
-When you're in the field, working (as you quite probably will) in a team,
- you might find these teams utilizing one of many different kinds of workflows
- in their collective use of Git and GitHub.
-Broadly, most of these workflows fall into two buckets:
- **single-remote workflows** and **multiple-remote workflows**.
+Although up until now we've been using Git only to manage our own projects,
+ it was actually designed as a tool for _teams_ to use,
+ so that they could collaborate more effectively.
+Since you're much more likely to be working on a development team
+ than working individually, it's important to know
+ how to use Git in a team setting.
 
-### Single-Remote Workflows
+Specific Git workflows will vary from team to team,
+ but most are built around feature branching, the practice of
+ using separate Git branches to isolate different features of an application
+ while they're under development.
+Though this is useful even in the context of working individually,
+ since it allows you to easily switch which part of the application
+ you're working on, where this approach really shines is in a group setting.
+By splitting up features over multiple different branches,
+ team members can work in parallel on different parts of an application
+ without stepping on each others' toes.
 
-What defines each of the following workflows is that
- there is a single shared remote repository used by the entire team.
-As a result, all collaborators must constantly stay on top of changes
- to a single shared repository.
-This is usually accomplished by running `git fetch`,
- which pulls updates from origin, and merging those updates;
- alternatively, you could use `git pull` to do both at once.
+There are three core mechanics within Git that a feature branching strategy
+ depends on.
+Two of them, branching and merging, you've already seen.
+Today, we'll introduce a third: _rebasing_.
 
 #### Centralized Workflow
 
