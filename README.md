@@ -1,4 +1,4 @@
-![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # Team Workflow with Git and GitHub
 
@@ -25,9 +25,9 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 1.  [Atlassian Tutorials: Using Branches](https://www.atlassian.com/git/tutorials/using-branches)
 
-2.  [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+1.  [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 
-3.  [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+1.  [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
       ('Conceptual Overiew' section only)
 
 ## Git, Together
@@ -60,12 +60,12 @@ Today, we'll introduce a third: _rebasing_.
 Suppose that you have two branches in your project, `master` and `feature`,
   and that the `feature` branch is currently checked out.
 
-![Rebase](images/rebase_01.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502525/5105d96e-e139-11e5-9db8-141694086e47.png)
 
 If you were to check out the master branch and make a new commit,
  the `feature` branch would no longer point to the end of the `master` branch.
 
-![Rebase](images/rebase_02.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502528/53566832-e139-11e5-94de-8c13a8345a01.png)
 
 How could we update our `feature` branch to incorporate the new change?
 One option might be to check out the `feature` branch and merge in `master`.
@@ -73,7 +73,7 @@ However, this is a little weird - we're essentially creating a duplicate commit.
 What's more, the commit on `master` might not be related to `feature`,
  so it may not make sense for it to be on the `feature` branch.
 
-![Rebase](images/rebase_03.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502529/552c4b4a-e139-11e5-969a-cfa525505311.png)
 
 Rebase essentially allows us to pluck off an entire branch and move it so that
  it points to a different commit.
@@ -81,14 +81,14 @@ All we need to do is check out the `feature` branch (`git checkout feature`)
  and run the command `git rebase master`; now, the root of the `feature` branch
  points to the new end of the `master` branch
 
-![Rebase](images/rebase_04.png)
-![Rebase](images/rebase_05.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502533/57591394-e139-11e5-934b-709ff96add94.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502535/58f37500-e139-11e5-8f24-cc1bb783c5e9.png)
 
 Now, to be honest, that's not quite what happens - in making the move,
 Git actually destroys the old commits and replaces them with new commits
  (with new and different SHAs).
 
- ![Rebase](images/rebase_06.png)
+ ![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502539/5b41ef8a-e139-11e5-8641-d488f3b88f0e.png)
 
 This is one of the things that can make `git rebase` dangerous.
 If you had other branches that pointed to the old commits on `feature`,
@@ -112,14 +112,14 @@ Though there are a lot of different potential Git workflows for teams,
       Any repos that you create as part of the project will go
       inside this organization.
 
-2.  Create two empty starting repos within the new GitHub organization.
+1.  Create two empty starting repos within the new GitHub organization.
      Clone those repos down to one team member's computer,
      add in any template files that the repo will be using,
      and then push the updated repos back up to GitHub.
      Additionally, create a new branch called `development` on each repo,
      and push those branches up to GitHub as well.
 
-3.  Have each member of the team clone both repos,
+1.  Have each member of the team clone both repos,
      so that they have their own copies of each.
 
 #### Regular Workflow
@@ -132,11 +132,11 @@ Each time you want to create a new feature for your app,
 
 1.  Check out your `development` branch (`git checkout development`)
 
-2.  Ensure that `development` is up to date with
+1.  Ensure that `development` is up to date with
      the `development` branch on GitHub
      by running `git pull origin development`.
 
-3.  Create and check out a new feature branch using
+1.  Create and check out a new feature branch using
      `git checkout -b my-feature-branch`
 
 ##### Integrating a Feature
@@ -145,7 +145,7 @@ Each time you want to create a new feature for your app,
      check in with your group and let them know that
      you're ready to integrate your feature.
 
-2.  Because `development` may have been updated
+1.  Because `development` may have been updated
      in the time since the feature branch was created,
      it's important to make sure that the new feature doesn't conflict
      with anything.
@@ -155,16 +155,16 @@ Each time you want to create a new feature for your app,
      Then, run `git checkout my-feature-branch` and `git rebase development`
      to rebase your new feature on top of the (updated) `development` branch.
 
-3.  If any conflicts were introduced in the previous step,
+1.  If any conflicts were introduced in the previous step,
      work through the code **with your group** and resolve each one;
      when you finish, make a commit.
 
-4.  Now that your branch has been rebased, and you're ready to integrate it,
+1.  Now that your branch has been rebased, and you're ready to integrate it,
      push your branch up to GitHub with `git push origin my-feature-branch`.
      and then create a pull request (within your GitHub repo)
      from your feature branch to the `development` branch.
 
-5.  As a group, review the pull request, confirm whether or not
+1.  As a group, review the pull request, confirm whether or not
      it can be merged in automatically, and decide whether or not
      to approve the pull request.
 
@@ -184,16 +184,16 @@ Work through the following steps as a group.
 1.  Have one member of the group check out `development`
      and pull down the latest version from GitHub.
 
-2.  For this version, check and make sure that the application is working.
+1.  For this version, check and make sure that the application is working.
      If you have tests, run them.
 
-3.  When you're satisfied that the app is ready to deploy,
+1.  When you're satisfied that the app is ready to deploy,
      check out the `master` branch and run `git merge development`.
 
-4.  Push the finished version of your code up to GitHub
+1.  Push the finished version of your code up to GitHub
      (`git push origin master`).
 
-5.  Deploy!
+1.  Deploy!
 
     _If this is your back-end repo,_
     _run `heroku create` to set up a new repo on Heroku,_
@@ -233,3 +233,8 @@ Make commits regularly, in case you need to undo a mistake!
 
 -   [Git Branches in a Nutshell](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 -   [Distributed Git Workflows](http://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows)
+
+## [License](LICENSE)
+
+Source code distributed under the MIT license. Text and other assets copyright
+General Assembly, Inc., all rights reserved.
