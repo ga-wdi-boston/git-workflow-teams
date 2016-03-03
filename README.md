@@ -6,20 +6,20 @@
 
 -   Create branches on a Git repository and make commits on those branches.
 
--   Combine changes from one branch with another using `git merge`.
+-   Combine changes from one branch with another
+     using `git merge` or `git rebase`.
 
 -   Combine changes from one branch with another using `git rebase`.
 
--   Explore different Git workflows that are practiced by teams
-     in the real world.
+-   Explain what "merge down, rebase up" means
 
 -   In squads, work through our recommended Git workflow
-     to build a small project together.
+     to build a small project.
 
 ## Prerequisites
 
 -   Basic Git workflow
--   Git Branching, Merging, and Rebasing.
+-   Git Branching and Merging
 
 If you're feeling fuzzy on these topics, here's some reading to brush up.
 
