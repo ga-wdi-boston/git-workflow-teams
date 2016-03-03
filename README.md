@@ -90,11 +90,9 @@ Git actually destroys the old commits and replaces them with new commits
 
  ![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502539/5b41ef8a-e139-11e5-8641-d488f3b88f0e.png)
 
-This is one of the things that can make `git rebase` dangerous.
-If other members of your team are working off of a branch that you rebase and push up, 
- you might screw up what they're working on.
-This is why, as a rule, you never rebase code that's already been shared -
- you run the risk of breaking other peoples' code.
+This is one of the things that can make `git rebase` dangerous, 
+ and it's the reason why you never rebase code that's already been 
+ published and shared - you run the risk of breaking other peoples' code.
 
 However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
