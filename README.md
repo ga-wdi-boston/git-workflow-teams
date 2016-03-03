@@ -60,12 +60,12 @@ Today, we'll introduce a third: _rebasing_.
 Suppose that you have two branches in your project, `master` and `feature`,
   and that the `feature` branch is currently checked out.
 
-![Rebase](images/rebase_01.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502525/5105d96e-e139-11e5-9db8-141694086e47.png)
 
 If you were to check out the master branch and make a new commit,
  the `feature` branch would no longer point to the end of the `master` branch.
 
-![Rebase](images/rebase_02.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502528/53566832-e139-11e5-94de-8c13a8345a01.png)
 
 How could we update our `feature` branch to incorporate the new change?
 One option might be to check out the `feature` branch and merge in `master`.
@@ -73,7 +73,7 @@ However, this is a little weird - we're essentially creating a duplicate commit.
 What's more, the commit on `master` might not be related to `feature`,
  so it may not make sense for it to be on the `feature` branch.
 
-![Rebase](images/rebase_03.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502529/552c4b4a-e139-11e5-969a-cfa525505311.png)
 
 Rebase essentially allows us to pluck off an entire branch and move it so that
  it points to a different commit.
@@ -81,14 +81,14 @@ All we need to do is check out the `feature` branch (`git checkout feature`)
  and run the command `git rebase master`; now, the root of the `feature` branch
  points to the new end of the `master` branch
 
-![Rebase](images/rebase_04.png)
-![Rebase](images/rebase_05.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502533/57591394-e139-11e5-934b-709ff96add94.png)
+![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502535/58f37500-e139-11e5-8f24-cc1bb783c5e9.png)
 
 Now, to be honest, that's not quite what happens - in making the move,
 Git actually destroys the old commits and replaces them with new commits
  (with new and different SHAs).
 
- ![Rebase](images/rebase_06.png)
+ ![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502539/5b41ef8a-e139-11e5-8641-d488f3b88f0e.png)
 
 This is one of the things that can make `git rebase` dangerous.
 If you had other branches that pointed to the old commits on `feature`,
