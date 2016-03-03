@@ -25,9 +25,9 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 1.  [Atlassian Tutorials: Using Branches](https://www.atlassian.com/git/tutorials/using-branches)
 
-2.  [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+1.  [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 
-3.  [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+1.  [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
       ('Conceptual Overiew' section only)
 
 ## Git, Together
@@ -112,14 +112,14 @@ Though there are a lot of different potential Git workflows for teams,
       Any repos that you create as part of the project will go
       inside this organization.
 
-2.  Create two empty starting repos within the new GitHub organization.
+1.  Create two empty starting repos within the new GitHub organization.
      Clone those repos down to one team member's computer,
      add in any template files that the repo will be using,
      and then push the updated repos back up to GitHub.
      Additionally, create a new branch called `development` on each repo,
      and push those branches up to GitHub as well.
 
-3.  Have each member of the team clone both repos,
+1.  Have each member of the team clone both repos,
      so that they have their own copies of each.
 
 #### Regular Workflow
@@ -132,11 +132,11 @@ Each time you want to create a new feature for your app,
 
 1.  Check out your `development` branch (`git checkout development`)
 
-2.  Ensure that `development` is up to date with
+1.  Ensure that `development` is up to date with
      the `development` branch on GitHub
      by running `git pull origin development`.
 
-3.  Create and check out a new feature branch using
+1.  Create and check out a new feature branch using
      `git checkout -b my-feature-branch`
 
 ##### Integrating a Feature
@@ -145,7 +145,7 @@ Each time you want to create a new feature for your app,
      check in with your group and let them know that
      you're ready to integrate your feature.
 
-2.  Because `development` may have been updated
+1.  Because `development` may have been updated
      in the time since the feature branch was created,
      it's important to make sure that the new feature doesn't conflict
      with anything.
@@ -155,16 +155,16 @@ Each time you want to create a new feature for your app,
      Then, run `git checkout my-feature-branch` and `git rebase development`
      to rebase your new feature on top of the (updated) `development` branch.
 
-3.  If any conflicts were introduced in the previous step,
+1.  If any conflicts were introduced in the previous step,
      work through the code **with your group** and resolve each one;
      when you finish, make a commit.
 
-4.  Now that your branch has been rebased, and you're ready to integrate it,
+1.  Now that your branch has been rebased, and you're ready to integrate it,
      push your branch up to GitHub with `git push origin my-feature-branch`.
      and then create a pull request (within your GitHub repo)
      from your feature branch to the `development` branch.
 
-5.  As a group, review the pull request, confirm whether or not
+1.  As a group, review the pull request, confirm whether or not
      it can be merged in automatically, and decide whether or not
      to approve the pull request.
 
@@ -184,16 +184,16 @@ Work through the following steps as a group.
 1.  Have one member of the group check out `development`
      and pull down the latest version from GitHub.
 
-2.  For this version, check and make sure that the application is working.
+1.  For this version, check and make sure that the application is working.
      If you have tests, run them.
 
-3.  When you're satisfied that the app is ready to deploy,
+1.  When you're satisfied that the app is ready to deploy,
      check out the `master` branch and run `git merge development`.
 
-4.  Push the finished version of your code up to GitHub
+1.  Push the finished version of your code up to GitHub
      (`git push origin master`).
 
-5.  Deploy!
+1.  Deploy!
 
     _If this is your back-end repo,_
     _run `heroku create` to set up a new repo on Heroku,_
