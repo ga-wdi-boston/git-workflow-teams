@@ -90,8 +90,8 @@ Git actually destroys the old commits and replaces them with new commits
 
  ![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502539/5b41ef8a-e139-11e5-8641-d488f3b88f0e.png)
 
-This is one of the things that can make `git rebase` dangerous, 
- and it's the reason why you never rebase code that's already been 
+This is one of the things that can make `git rebase` dangerous,
+ and it's the reason why you never rebase code that's already been
  published and shared - you run the risk of breaking other peoples' code.
 
 However, as long as you're only rebasing your own code on top of things,
@@ -218,9 +218,9 @@ Work through the following steps as a group.
 To practice the workflow we've prescribed for you,
  your team will now follow it to create a simple front-end app
  that (in response to a button-click) uses AJAX
- to GET data from [this API endpoint](http://jsonplaceholder.typicode.com/users),
+ to GET data from [this API endpoint](https://wdi-library.herokuapp.com/books),
  and then renders the resultant data nicely in the page using Handlebars.
-You may start by downloading the front-end template as a ZIP
+You may start by downloading the JS-Template as a ZIP
  and dropping those files into your repo.
 Your feature branches should be `html-css`, `ajax`, `handlebars`,
  and `ui-behavior`.
