@@ -153,6 +153,12 @@ Each time you want to create a new feature for your app,
      Then, run `git checkout my-feature-branch` and `git rebase development`
      to rebase your new feature on top of the (updated) `development` branch.
 
+     <!-- Instructor note
+  Be sure to emphasize the semantic difference between rebase and pull. (per issue #18)
+  You should always use `git pull --rebase` when your changes do not deserve a separate branch.
+  Make this distinction known: Your local branch, into which you pull changes, and remote branch are, actually, different branches, and git pull is about merging them (through a fetch and merge). When it would be better for any two branches in question to be one branch is where git pull rebase comes into play. You no longer merge, you actually commit one branch on top of the other.
+     -->
+
 1.  If any conflicts were introduced in the previous step,
      work through the code **with your group** and resolve each one;
      when you finish, make a commit.
