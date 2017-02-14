@@ -147,7 +147,7 @@ Each time you want to create a new feature for your app,
      in the time since the feature branch was created,
      it's important to make sure that the new feature doesn't conflict
      with anything.
-     Run `git checkout development` and `git pull --rebase` to make sure
+     Run `git checkout development` and `git pull --rebase origin development` to make sure
      that your `development` branch incorporates any updates that were made
      on the repo on GitHub.
      Then, run `git checkout my-feature-branch` and `git rebase development`
