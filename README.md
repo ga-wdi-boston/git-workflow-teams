@@ -202,9 +202,8 @@ Work through the following steps as a group.
     _If this is your back-end repo,_
     _run `heroku create` to set up a new repo on Heroku,_
     _and push to it by running `git push heroku master`._
-    _If this is your front-end repo, run `git checkout -b gh-pages`;_
-    _then, remove `bundle.js` and `vendor.js` from your .gitignore file,_
-    _make a new commit, and push up your `gh-pages` branch to GitHub._
+    _If this is your front-end repo, test your build with `grunt build`,_ 
+    _then run `grunt deploy`_
 
 ##### GENERAL GUIDELINES
 
