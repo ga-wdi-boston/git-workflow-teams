@@ -45,7 +45,7 @@ Specific Git workflows will vary from team to team,
  while they're under development.
 Though this is useful even in the context of working individually,
  since it allows you to easily switch which part of the application
- you're working on, where this approach really shines is in a group setting.
+ you're working on, where this approach really shines is in a team setting.
 By splitting up features over multiple different branches,
  team members can work in parallel on different parts of an application
  without stepping on each others' toes.
@@ -98,10 +98,10 @@ However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
  it's a great way of making sure that `feature` stays up to date.
 
-### The GA Group Project Workflow
+### The GA Team Project Workflow
 
 Though there are a lot of different potential Git workflows for teams,
- for your group project, we will require you to use the following workflow.
+ for your team project, we will require you to use the following workflow.
 
 #### Setup (Do Once)
 
@@ -140,7 +140,7 @@ Each time you want to create a new feature for your app,
 ##### Integrating a Feature
 
 1.  After you're done working on the branch,
-     check in with your group and let them know that
+     check in with your team and let them know that
      you're ready to integrate your feature.
 
 1.  Because `development` may have been updated
@@ -160,7 +160,7 @@ Each time you want to create a new feature for your app,
      -->
 
 1.  If any conflicts were introduced in the previous step,
-     work through the code **with your group** and resolve each one;
+     work through the code **with your team** and resolve each one;
      when you finish, make a commit.
 
 1.  Now that your branch has been rebased, and you're ready to integrate it,
@@ -168,7 +168,7 @@ Each time you want to create a new feature for your app,
      and then create a pull request (within your GitHub repo)
      from your feature branch to the `development` branch.
 
-1.  As a group, review the pull request, confirm whether or not
+1.  As a team, review the pull request, confirm whether or not
      it can be merged in automatically, and decide whether or not
      to approve the pull request.
 
@@ -177,15 +177,15 @@ Each time you want to create a new feature for your app,
      on their machine, and then push the newly updated `development` branch
      back up to GitHub.
 
-Once `development` has been updated, other members of the group
+Once `development` has been updated, other members of the team
  will need to rebase their own feature branches on it (as described in Step 2)
  before they push up those feature branches up to GitHub.
 
 ##### Deploying a Working App
 
-Work through the following steps as a group.
+Work through the following steps as a team.
 
-1.  Have one member of the group check out `development`
+1.  Have one member of the team check out `development`
      and pull down the latest version from GitHub.
 
 1.  For this version, check and make sure that the application is working.
@@ -202,7 +202,7 @@ Work through the following steps as a group.
     _If this is your back-end repo,_
     _run `heroku create` to set up a new repo on Heroku,_
     _and push to it by running `git push heroku master`._
-    _If this is your front-end repo, test your build with `grunt build`,_ 
+    _If this is your front-end repo, test your build with `grunt build`,_
     _then run `grunt deploy`_
 
 ##### GENERAL GUIDELINES
@@ -221,7 +221,8 @@ Work through the following steps as a group.
 -   **Never _ever_** rebase code that's been published.
     Remember, 'merge down, rebase up'!
 
-### Lab : Using the GA Group Project Workflow
+### Lab : Using the GA Team
+ Project Workflow
 
 To practice the workflow we've prescribed for you,
  your team will now follow it to create a simple front-end app
