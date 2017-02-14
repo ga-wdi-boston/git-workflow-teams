@@ -240,6 +240,7 @@ Make commits regularly, in case you need to undo a mistake!
 
 -   [Git Branches in a Nutshell](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 -   [Distributed Git Workflows](http://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows)
+-   [Learning git visually](https://onlywei.github.io/explain-git-with-d3/)
 
 ## [License](LICENSE)
 
