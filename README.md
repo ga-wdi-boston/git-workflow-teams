@@ -208,6 +208,9 @@ Work through the following steps as a group.
 
 ##### GENERAL GUIDELINES
 
+-   **Always** branch by feature. Each branch should have a feature in mind, i.e. auth, book-single, book-collection, etc...,
+    and that feature should be completed fully before it's merged into development.
+
 -   **Always** pull before a merge or rebase.
 
 -   **Never** work directly on either `development` or `master`.
