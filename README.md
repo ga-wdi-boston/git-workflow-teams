@@ -57,10 +57,10 @@ Today, we'll introduce a third: _rebasing_.
 
 ### Git Rebase, in Pictures
 
-Suppose that you have two branches in your project, `master` and `feature`,
+Suppose that (in addition to master) you have two branches in your project, `dev` and `feature`,
   and that the `feature` branch is currently checked out.
 
-![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502525/5105d96e-e139-11e5-9db8-141694086e47.png)
+![Rebase](http://i.imgur.com/ysQ8ytk.png)
 
 If you were to check out the master branch and make a new commit,
  the `feature` branch would no longer point to the end of the `master` branch.
