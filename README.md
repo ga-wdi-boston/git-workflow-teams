@@ -60,12 +60,12 @@ Today, we'll introduce a third: _rebasing_.
 Suppose that (in addition to master) you have two branches in your project, `dev` and `feature`,
   and that the `feature` branch is currently checked out.
 
-![Rebase](http://i.imgur.com/ysQ8ytk.png)
+![initialTree](http://i.imgur.com/ysQ8ytk.png)
 
-If you were to check out the master branch and make a new commit,
- the `feature` branch would no longer point to the end of the `master` branch.
+If you were to check out the dev branch and make a new commit,
+ the `feature` branch would no longer point to the end of the `dev` branch.
 
-![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502528/53566832-e139-11e5-94de-8c13a8345a01.png)
+![RebaseBefore](http://i.imgur.com/mT5eka7.png)
 
 How could we update our `feature` branch to incorporate the new change?
 One option might be to check out the `feature` branch and merge in `master`.
