@@ -84,7 +84,7 @@ All we need to do is check out the `feature` branch (`git checkout feature`)
 ![StaleDev](http://i.imgur.com/mT5eka7.png)
 ![RebaseDev](http://i.imgur.com/GAMQJYu.png)
 
-Now, to be honest, that's not quite what happens - in making the move,
+That's the end result of a rebase, but rebase doesn't just "move" commits - in making the move,
 Git actually destroys the old commits and replaces them with new commits
  (with new and different SHAs).
 
@@ -94,7 +94,7 @@ This is one of the things that can make `git rebase` dangerous,
 
 However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
- it's a great way of making sure that `feature` stays up to date.
+ it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
 
 ### The GA Team Project Workflow
 
