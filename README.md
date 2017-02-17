@@ -68,12 +68,12 @@ If you were to check out the dev branch and make a new commit,
 ![RebaseBefore](http://i.imgur.com/mT5eka7.png)
 
 How could we update our `feature` branch to incorporate the new change?
-One option might be to check out the `feature` branch and merge in `master`.
+One option might be to check out the `feature` branch and merge in `dev`.
 However, this is a little weird - we're essentially creating a duplicate commit.
-What's more, the commit on `master` might not be related to `feature`,
+What's more, the commit on `dev` might not be related to `feature`,
  so it may not make sense for it to be on the `feature` branch.
 
-![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502529/552c4b4a-e139-11e5-969a-cfa525505311.png)
+![MergeDevIntoFeature](http://i.imgur.com/dUmRcgc.png)
 
 Rebase essentially allows us to pluck off an entire branch and move it so that
  it points to a different commit.
