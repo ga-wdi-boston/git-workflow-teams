@@ -78,11 +78,11 @@ What's more, the commit on `dev` might not be related to `feature`,
 Rebase essentially allows us to pluck off an entire branch and move it so that
  it points to a different commit.
 All we need to do is check out the `feature` branch (`git checkout feature`)
- and run the command `git rebase master`; now, the root of the `feature` branch
- points to the new end of the `master` branch
+ and run the command `git rebase development`; now, the root of the `feature` branch
+ points to the new end of the `development` branch
 
-![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502533/57591394-e139-11e5-934b-709ff96add94.png)
-![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502535/58f37500-e139-11e5-8f24-cc1bb783c5e9.png)
+![StaleDev](http://i.imgur.com/mT5eka7.png)
+![RebaseDev](http://i.imgur.com/GAMQJYu.png)
 
 Now, to be honest, that's not quite what happens - in making the move,
 Git actually destroys the old commits and replaces them with new commits
