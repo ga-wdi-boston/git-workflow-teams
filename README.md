@@ -88,8 +88,6 @@ Now, to be honest, that's not quite what happens - in making the move,
 Git actually destroys the old commits and replaces them with new commits
  (with new and different SHAs).
 
- ![Rebase](https://cloud.githubusercontent.com/assets/3653013/13502539/5b41ef8a-e139-11e5-8641-d488f3b88f0e.png)
-
 This is one of the things that can make `git rebase` dangerous,
  and it's the reason why you never rebase code that's already been
  published and shared - you run the risk of breaking other peoples' code.
