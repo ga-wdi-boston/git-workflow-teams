@@ -68,10 +68,10 @@ If you were to check out the dev branch and make a new commit,
 ![RebaseBefore](http://i.imgur.com/mT5eka7.png)
 
 How could we update our `feature` branch to incorporate the new change?
-One option might be to check out the `feature` branch and merge in `dev`.
+One option might be to check out the `feature` branch and merge in `dev`. A merge applies commits from another branch on top of any commits you've made.
 However, this is a little weird - we're essentially creating a duplicate commit.
 What's more, the commit on `dev` might not be related to `feature`,
- so it may not make sense for it to be on the `feature` branch.
+ so it may not make sense for it to be on the `feature` branch. .
 
 ![MergeDevIntoFeature](http://i.imgur.com/dUmRcgc.png)
 
@@ -90,7 +90,7 @@ Git actually destroys the old commits and replaces them with new commits
 
 This is one of the things that can make `git rebase` dangerous,
  and it's the reason why you never rebase code that's already been
- published and shared - you run the risk of breaking other peoples' code.
+ published and shared - you run the risk of breaking other peoples' code. After a rebase, pushing to the branch will require --force-with-lease since the history has been rewritten.
 
 However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
@@ -176,6 +176,10 @@ Each time you want to create a new feature for your app,
   Be sure to emphasize the semantic difference between rebase and pull. (per issue #18)
   You should always use `git pull --rebase` when your changes do not deserve a separate branch.
   Make this distinction known: Your local branch, into which you pull changes, and remote branch, are actually different branches, and git pull is about merging them (through a fetch and merge). When it would be better for any two branches in question to be one branch is where git pull rebase comes into play. You no longer merge, you actually commit one branch on top of the other for unified history.
+
+  merge--applies commits from another branch on top of any commits you've made.
+
+  rebase--adds commits onto a shared commit in both branches history and then reapplies your commits on top of those. After a rebase, pushing to the branch will require --force-with-lease since the history has been rewritten
      -->
 
 1.  If any conflicts were introduced in the previous step,
