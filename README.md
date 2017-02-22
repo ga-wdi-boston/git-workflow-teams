@@ -247,8 +247,8 @@ To practice the workflow we've prescribed for you,
  that (in response to a button-click) uses AJAX
  to GET data from [this API endpoint](https://wdi-library.herokuapp.com/books),
  and then renders the resultant data nicely in the page using Handlebars.
-You may start by downloading the JS-Template as a ZIP
- and dropping those files into your repo.
+You may start by downloading the [Browser-Template](https://github.com/ga-wdi-boston/browser-template) as a ZIP
+ and renaming and moving those files into your repo.
 Your feature branches should be `html-css`, `ajax`, `handlebars`,
  and `ui-behavior`.
 
