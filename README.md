@@ -108,6 +108,15 @@ the commands for both rebasing and merging and take note of the differences you 
 
 _Take five minutes to run through these exercises and discuss insights among your squads._
 
+
+### What's in a rebase, really?
+
+Let's break down the following diagram together.
+
+## Git's rebase, step by step.
+
+![RebaseProgression](http://i.imgur.com/xExvY8v.png)
+
 ### The GA Team Project Workflow
 
 Though there are a lot of different potential Git workflows for teams,
