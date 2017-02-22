@@ -28,7 +28,7 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 1.  [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 
 1.  [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-      ('Conceptual Overiew' section only)
+      ('Conceptual Overview' section only)
 
 ## Git, Together
 
@@ -96,7 +96,7 @@ However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
  it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
 
-### Lab : Identify the differences between rebase and merge.
+### Lab: Identify the differences between rebase and merge.
 - Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
 - This is a very simple git model, and it assumes that every commit already has
 change that have been added and save. Using `git checkout` `git commit` (every git commit will place generate a new commit on the current branch) `git merge` and `git rebase` commands, and the provided examples for merging and rebasing, run
@@ -240,7 +240,7 @@ Work through the following steps as a team.
 -   **Never _ever_** rebase code that's been published.
     Remember, 'merge down, rebase up'!
 
-### Lab : Using the GA Team Project Workflow
+### Lab: Using the GA Team Project Workflow
 
 To practice the workflow we've prescribed for you,
  your team will now follow it to create a simple front-end app
