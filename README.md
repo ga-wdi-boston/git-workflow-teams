@@ -96,6 +96,18 @@ However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
  it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
 
+### Lab : Identify the differences between rebase and merge.
+- Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
+- This is a very simple git model, and it assumes that every commit already has
+change that have been added and save. Using `git checkout` `git commit` (every git commit will place generate a new commit on the current branch) `git merge` and `git rebase` commands, and the provided examples for merging and rebasing, run
+the commands for both rebasing and merging and take note of the differences you find.
+- Pay special attention to the following:
+  - What does `merge down, rebase up` mean?
+  - In plain English, what does git merge do to our history?
+  - In plain English, what does git rebase do to our history?
+
+_Take five minutes to run through these exercises and discuss insights among your squads._
+
 ### The GA Team Project Workflow
 
 Though there are a lot of different potential Git workflows for teams,
