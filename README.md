@@ -231,8 +231,7 @@ Work through the following steps as a team.
 -   **Never _ever_** rebase code that's been published.
     Remember, 'merge down, rebase up'!
 
-### Lab : Using the GA Team
- Project Workflow
+### Lab : Using the GA Team Project Workflow
 
 To practice the workflow we've prescribed for you,
  your team will now follow it to create a simple front-end app
