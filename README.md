@@ -90,7 +90,7 @@ Git actually destroys the old commits and replaces them with new commits
 
 This is one of the things that can make `git rebase` dangerous,
  and it's the reason why you never rebase code that's already been
- published and shared - you run the risk of breaking other peoples' code. After a rebase, pushing to the branch will require --force-with-lease since the history has been rewritten.
+ published and shared - you run the risk of breaking other peoples' code.
 
 However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
