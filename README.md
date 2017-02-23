@@ -62,7 +62,7 @@ Suppose that (in addition to master) you have two branches in your project, `dev
 
 ![initialTree](http://i.imgur.com/ysQ8ytk.png)
 
-If you were to check out the dev branch and make a new commit,
+If you were to check out the `dev` branch and make a new commit,
  the `feature` branch would no longer point to the end of the `dev` branch.
 
 ![RebaseBefore](http://i.imgur.com/mT5eka7.png)
@@ -255,6 +255,7 @@ You may start by downloading the [Browser-Template](https://github.com/ga-wdi-bo
  and renaming and moving those files into your repo.
 Your feature branches should be `html-css`, `ajax`, `handlebars`,
  and `ui-behavior`.
+**You need to follow the above steps or you _will_ lose hidden files.**
 
 Make commits regularly, in case you need to undo a mistake!
 
